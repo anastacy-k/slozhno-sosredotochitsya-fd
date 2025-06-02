@@ -2,4 +2,229 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--font-family-basic);
+  background-color: var(--color-bg);
+  background-image: var(--img-bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--color-heading-secondary);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-basic);
+}
+
+.title {
+  font-size: var(--font-size-basic);
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.title-decor {
+  color: var(--color-heading-primary);
+  background-color: var(--color-bg-contrast);
+}
+
+.text {
+  font-size: var(--font-size-basic);
+  font-weight: normal;
+  line-height: 130%;
+  color: var(--color-text);
+}
+
+.links-decor {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--color-accent);
+}
+
+.links-decor:hover {
+  cursor: pointer;
+  border-block-end: 1px solid var(--color-text);
+}
+
+.links-decor:focus {
+  outline: none;
+}
+
+.links-decor:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
+.header {
+  display: grid;
+  align-items: flex-start;
+  padding: var(--spacing-basic);
+  margin-block-end: var(--spacing-s);
+  inline-size: 100vw;
+  block-size: 100vh;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+  border-right: 1px solid var(--color-accent);
+  border-top: 1px solid var(--color-accent);
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+  border-bottom: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+}
+
+.header__decorative-element {
+  position: relative;
+}
+
+.header__decorative-element::before {
+  position: absolute;
+  content: 'REC';
+  color: var(--color-accent);
+  font-size: var(--font-size-basic);
+  inset-inline-end: 28px;
+  inset-block-start: 2px;
+}
+
+.header__decorative-element::after {
+  position: absolute;
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
+  inset-inline-end: 9px;
+  inset-block-start: 9px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--color-accent);
+}
+
+.header__theme-menu{
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-basic);
+}
+
+.header__theme-menu-button {
+  padding: 2px 13px;
+  font-size: var(--font-size-basic);
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-transform: lowercase;
+  color: var(--color-accent);
+  cursor: pointer;
+  appearance: none;
+  text-align: center;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(var(--color-accent-rgb), 0.5);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: 1px solid var(--color-accent);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--color-accent);
+  pointer-events: none;
+}
+
+.header__text {
+  text-transform: lowercase;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  line-height: 82.5%;
+  color: var(--color-text-primary);
+  text-shadow: 4px 4px 0 var(--color-accent);
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-basic);
+  font-weight: bold;
+  line-height: 130%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.focus-difficulty {
+  display: grid;
+  gap: var(--spacing-xs);
+  padding: 0 var(--spacing-basic);
+}
+
+.concentration-killers {
+  display: grid;
+  gap: var(--spacing-xs);
+  padding: 0 var(--spacing-basic);
+}
+
+.focus-tips {
+  display: grid;
+  gap: var(--spacing-xs);
+  padding: 0 var(--spacing-basic);
+}
+
+.focus-tips__item__title {
+  font-size: var(--font-size-basic);
+  font-weight: normal;
+}
+
+.focus-tips__item + .focus-tips__item {
+  padding-block-start: var(--spacing-xs);
+}
+
+.visual-tips {
+  display: grid;
+  gap: var(--spacing-basic);
+  padding: 0 var(--spacing-basic);
+}
+
+.visual-tips__image {
+  inline-size: calc(100vw - (var(--spacing-basic) * 2));
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  block-size: 100vh;
+  margin-block-start: var(--spacing-s);
+}
+
+.footer__text {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: bold;
+  color: var(--color-text-primary);
+  text-shadow: 4px 4px 0 var(--color-accent);
 }

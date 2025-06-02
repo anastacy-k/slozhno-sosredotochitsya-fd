@@ -2,3 +2,23 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --font-family-basic: 'IBM Plex mono', sans-serif;
+  --font-size-basic: 18px;
+  --img-bg: url(../images/cover-image-dark.png);
+  --color-accent: #FF0070;
+  --color-accent-rgb: 250, 0, 12;
+  --color-bg: #000028;
+  --color-bg-contrast: #FF0070;
+  --color-heading-primary: #000028;
+  --color-heading-secondary: #FF0070;
+  --color-heading-tertiary: #000028;
+  --color-text-primary: #DB00FF;
+  --color-text: #F1B2CE;
+  --spacing-basic: 10px;
+  --spacing-xs: calc(var(--spacing-basic) * 2);
+  --spacing-s: calc(var(--spacing-basic) * 4);
+  --spacing-m: calc(var(--spacing-basic) * 5);
+  --spacing-l: calc(var(--spacing-basic) * 6);
+  --spacing-xl: calc(var(--spacing-basic) * 8);
+}
