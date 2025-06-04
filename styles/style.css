@@ -43,7 +43,7 @@
 
 .links-decor:hover {
   cursor: pointer;
-  border-block-end: 1px solid var(--color-border);
+  border-block-end: 1px solid var(--color-text);
 }
 
 .links-decor:focus {
@@ -51,7 +51,7 @@
 }
 
 .links-decor:focus-visible {
-  outline: 1px solid var(--color-border);
+  outline: 1px solid var(--color-text);
 }
 
 .header {
@@ -60,7 +60,9 @@
   padding: var(--spacing-basic);
   margin-block-end: var(--spacing-s);
   inline-size: 100%;
+  min-block-size: 668px;
   block-size: 100vh;
+
 }
 
 .decorated-zone {
@@ -191,6 +193,11 @@
   padding: 0 var(--spacing-basic);
 }
 
+.concentration-killers__container {
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
 .focus-tips {
   display: grid;
   gap: var(--spacing-xs);
@@ -221,6 +228,7 @@
 .footer {
   display: grid;
   place-items: center;
+  min-block-size: 668px;
   block-size: 100vh;
   margin-block-start: var(--spacing-s);
 }
@@ -288,6 +296,11 @@
 
   .concentration-killers__title {
     grid-column: 1 / 2;
+  }
+
+  .concentration-killers__container {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .concentration-killers__card {
@@ -388,9 +401,12 @@
     column-gap: var(--spacing-basic);
   }
 
+  .concentration-killers__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
   .concentration-killers__card {
     grid-column: auto;
-    grid-row: 2 / auto;
   }
 
   .focus-tips {
