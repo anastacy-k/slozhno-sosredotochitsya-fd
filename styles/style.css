@@ -59,7 +59,7 @@
   align-items: flex-start;
   padding: var(--spacing-basic);
   margin-block-end: var(--spacing-s);
-  inline-size: 100vw;
+  inline-size: 100%;
   block-size: 100vh;
 }
 
