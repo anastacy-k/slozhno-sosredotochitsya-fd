@@ -7,7 +7,8 @@
   --font-size-basic: 18px;
   --img-bg: url(../images/cover-image-dark.png);
   --color-accent: #FF0070;
-  --color-accent-rgb: 250, 0, 12;
+  --color-border: #FF0070;
+  --color-border-rgb: 250, 0, 12;
   --color-bg: #000028;
   --color-bg-contrast: #FF0070;
   --color-heading-primary: #000028;
